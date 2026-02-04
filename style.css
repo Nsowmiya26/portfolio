@@ -7,60 +7,99 @@
 
 /* Body and general layout */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    margin: 20px;
 }
 
-/* Header */
-header {
-    background-color: #4CAF50;
+/* Container to center content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Hero Section */
+#hero {
+    background: #4CAF50;
     color: white;
+    padding: 100px 0;
     text-align: center;
-    padding: 20px;
 }
 
-header h1 {
-    font-size: 2.5rem;
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-header p {
-    font-size: 1.2rem;
-}
-
-/* Section styles */
-section {
-    margin: 20px 0;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #4CAF50;
-}
-
-ul {
-    list-style-type: none;
-}
-
-ul li {
-    padding: 8px;
-    border-bottom: 1px solid #ccc;
-}
-
-ul li h3 {
+#hero p {
     font-size: 1.5rem;
+    margin-bottom: 30px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-footer a {
+#hero .btn {
+    background-color: white;
     color: #4CAF50;
+    padding: 15px 30px;
     text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
 }
+
+/* About Section */
+#about {
+    background: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Skills Section */
+#skills {
+    background: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#skills ul {
+    list-style: none;
+}
+
+#skills ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Experience Section */
+#experience {
+    background: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#experience ul {
+    list-style: none;
+}
+
+#experience ul li {
+    margin-bot
