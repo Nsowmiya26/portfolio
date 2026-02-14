@@ -10,8 +10,15 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-body{background:#000;color:#ddd;font-family:'Poppins',sans-serif;}
 
+body{
+background:#000;
+color:#ddd;
+font-family:'Poppins',sans-serif;
+line-height:1.6;
+}
+
+/* GOLD SHINE */
 .gold{
 background: linear-gradient(90deg,#b68b2c,#f5d76e,#c9a227,#fff1b0,#b68b2c);
 background-size:300% auto;
@@ -21,62 +28,101 @@ animation:shine 5s linear infinite;
 }
 @keyframes shine{to{background-position:300% center;}}
 
+/* NAV */
 nav{
-display:flex;justify-content:space-between;
-padding:15px 10%;border-bottom:1px solid rgba(201,162,39,0.3);
-background:#000;position:sticky;top:0;
+display:flex;
+justify-content:space-between;
+padding:15px 10%;
+border-bottom:1px solid rgba(201,162,39,0.3);
+background:#000;
+position:sticky;
+top:0;
+z-index:1000;
 }
-nav a{color:#c9a227;margin-left:18px;text-decoration:none;font-size:14px;}
+
+nav a{
+text-decoration:none;
+margin-left:18px;
+color:#c9a227;
+font-size:14px;
+}
+
 nav a:hover{color:#fff1b0;}
 
+/* HERO */
 .hero{
-height:80vh;display:flex;flex-direction:column;
-align-items:center;justify-content:center;text-align:center;
+text-align:center;
+padding:60px 10%;
 }
-.hero h1{font-family:'Playfair Display',serif;font-size:36px;}
-.hero p{margin-top:10px;color:#ccc;}
 
-section{padding:70px 10%;}
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:34px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:14px;
+color:#ccc;
+}
+
+/* SECTION */
+section{
+padding:60px 10%;
+}
+
 .section-title{
 font-family:'Playfair Display',serif;
-font-size:22px;margin-bottom:25px;
-border-left:2px solid #c9a227;padding-left:10px;
+font-size:22px;
+margin-bottom:20px;
+border-left:2px solid #c9a227;
+padding-left:10px;
 }
 
+/* CARD */
 .card{
-background:#111;padding:20px;border-radius:10px;
+background:#111;
+padding:20px;
+border-radius:10px;
 border:1px solid rgba(201,162,39,0.2);
-margin-bottom:20px;transition:0.3s;
+margin-bottom:20px;
+transition:0.3s;
 }
+
 .card:hover{
 transform:translateY(-5px);
 box-shadow:0 0 20px rgba(245,215,110,0.4);
 }
 
-ul{padding-left:20px;margin-top:10px;}
+ul{margin-left:20px;margin-top:10px;}
 li{margin-bottom:8px;}
 
-.skills-list{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:10px;
+/* CONTACT */
+.contact-container{
+display:flex;
+gap:25px;
+justify-content:center;
 }
 
-.contact-container{
-display:flex;gap:25px;justify-content:center;
-}
 .contact-box{
-flex:1;background:#111;padding:30px;
-text-align:center;border-radius:10px;
+flex:1;
+background:#111;
+padding:30px;
+text-align:center;
+border-radius:10px;
 border:1px solid rgba(201,162,39,0.3);
 transition:0.3s;
 }
+
+.contact-box i{
+font-size:26px;
+margin-bottom:12px;
+color:#f5d76e;
+}
+
 .contact-box:hover{
 transform:translateY(-8px);
 box-shadow:0 0 25px rgba(245,215,110,0.5);
-}
-.contact-box i{
-font-size:28px;margin-bottom:15px;color:#f5d76e;
 }
 
 @media(max-width:900px){
@@ -90,7 +136,7 @@ font-size:28px;margin-bottom:15px;color:#f5d76e;
 <nav>
 <div class="gold">Sowmiya</div>
 <div>
-<a href="#about">About</a>
+<a href="#objective">Objective</a>
 <a href="#education">Education</a>
 <a href="#experience">Experience</a>
 <a href="#skills">Skills</a>
@@ -99,12 +145,16 @@ font-size:28px;margin-bottom:15px;color:#f5d76e;
 </div>
 </nav>
 
-<section class="hero">
+<div class="hero">
 <h1 class="gold">Sowmiya Natarajan</h1>
-<p>WordPress Web Designer | 1.3 Years Experience</p>
-</section>
+<p>
+16A/131/13, Chairman Nalla Muthupillai Street, Bhuvaneshwari School Backside,<br>
+Madurai - 625001 <br>
+9566475966 | sowmiya.natarajan08@gmail.com
+</p>
+</div>
 
-<section id="about">
+<section id="objective">
 <h2 class="section-title gold">Objective</h2>
 <div class="card">
 To utilize my technical skills and provide a professional service to customers by applying and honing my knowledge and working in a challenging and motivating working environment.
@@ -115,86 +165,95 @@ To utilize my technical skills and provide a professional service to customers b
 <h2 class="section-title gold">Education</h2>
 
 <div class="card">
-<b>The American College</b><br>
-B.Com (Information Technology) – 80.5%
+<b>The American College</b> (2020 - 2023)<br>
+B.Com (Information Technology)<br>
+80.5%
 </div>
 
 <div class="card">
-<b>Nirmala Girls Higher Secondary School</b><br>
+<b>Nirmala Girls Higher Secondary School</b> (2019 - 2020)<br>
 HSC – 73.5%
 </div>
 
 <div class="card">
-<b>Nirmala Girls Higher Secondary School</b><br>
+<b>Nirmala Girls Higher Secondary School</b> (2017 - 2018)<br>
 SSLC – 74.6%
 </div>
+
 </section>
 
 <section id="experience">
 <h2 class="section-title gold">Experience</h2>
 
 <div class="card">
-<b>CBRA – Web Design & Web Development (Dec 2024 – Present)</b>
+<b>ESSKAY ASSOCIATES</b> (Oct'23 - Nov'24)<br>
+Account Analyst
 <ul>
-<li>Designed and developed websites using WordPress (Divi, Elementor, WPBakery).</li>
-<li>Updated PHP & cPanel managed websites.</li>
-<li>Worked on WP Engine, Hostinger & Cloudways hosting platforms.</li>
-<li>Handled site migrations, backups & renewal follow-ups.</li>
-<li>Configured and managed business email accounts.</li>
+<li>Managed GST filing (GSTR-1, GSTR-3B) for 40+ clients across industries, ensuring compliance with tax regulations.</li>
+<li>Handled purchase and sales bill entries, ensuring accurate tax calculations.</li>
+<li>Prepared and maintained Financial Management (FM) excel sheets for clients on a monthly basis to monitor expenses, revenues, and tax liabilities.</li>
 </ul>
 </div>
 
 <div class="card">
-<b>ESSKAY ASSOCIATES – Account Analyst (Oct 2023 – Nov 2024)</b>
+<b>CBRA</b> (Dec'24 - Present)<br>
+Web Design & Web Development
 <ul>
-<li>Managed GST filing (GSTR-1, GSTR-3B) for 40+ clients.</li>
-<li>Handled purchase & sales entries with accurate tax calculations.</li>
-<li>Maintained Financial Management Excel sheets monthly.</li>
+<li>Designed and developed websites using WordPress with Divi, Elementor, and WPBakery page builders.</li>
+<li>Performed updates and modifications on PHP-based and cPanel-managed websites.</li>
+<li>Worked on WP Engine, Hostinger, and Cloudways hosting platforms.</li>
+<li>Handled site migrations, backups, demo setups, and renewal follow-ups.</li>
+<li>Managed and configured business emails including creating email accounts and adding users.</li>
 </ul>
 </div>
+
 </section>
 
 <section id="skills">
 <h2 class="section-title gold">Skills</h2>
-<div class="card skills-list">
-<div>MS Office (Excel, Word, PPT, PDF)</div>
-<div>WordPress</div>
-<div>Photoshop & Canva</div>
-<div>HTML & CSS</div>
-<div>Basic Programming (C, C++, Java)</div>
-<div>Tally ERP 9</div>
-<div>Typewriting – English & Tamil</div>
+<div class="card">
+<ul>
+<li>MS Office – Excel, Word, PPT, PDF</li>
+<li>WordPress</li>
+<li>Photoshop & Canva</li>
+<li>HTML & CSS</li>
+<li>Basic Programming – C, C++, Java</li>
+<li>Tally ERP 9</li>
+<li>Typewriting – English & Tamil</li>
+</ul>
 </div>
 </section>
 
 <section id="achievements">
-<h2 class="section-title gold">Achievements & Certifications</h2>
+<h2 class="section-title gold">Achievements & Awards</h2>
 <div class="card">
 <ul>
-<li>Participated in Pencil Drawing Competition – FEM FIESTA 2022.</li>
-<li>Completed Creative Advertising Course (Jan 2021 – Apr 2021).</li>
-<li>Completed Digital Marketing Course (Aug 2020 – Dec 2020).</li>
+<li>Participated in Pencil Drawing Competition of FEM FIESTA - 2022 organized by the Women’s Forum of The American College.</li>
+<li>Successfully completed the CREATIVE ADVERTISING course (Jan 2021 - Apr 2021).</li>
+<li>Successfully completed the DIGITAL MARKETING course (Aug 2020 - Dec 2020).</li>
 </ul>
 </div>
 
 <h2 class="section-title gold">Languages</h2>
 <div class="card">
-English – Read & Write<br>
+English – Read & Write <br>
 Tamil – Read & Write
 </div>
 
 <h2 class="section-title gold">Personal Details</h2>
 <div class="card">
-Date of Birth: 26/08/2002<br>
-Nationality: Indian<br>
+Date of Birth: 26/08/2002 <br>
+Nationality: Indian <br>
 Gender: Female
 </div>
+
 </section>
 
 <section id="contact">
 <h2 class="section-title gold">Contact</h2>
 
 <div class="contact-container">
+
 <div class="contact-box">
 <i class="fa-solid fa-phone"></i>
 <h3 class="gold">Phone</h3>
@@ -210,11 +269,10 @@ Gender: Female
 <div class="contact-box">
 <i class="fa-solid fa-location-dot"></i>
 <h3 class="gold">Address</h3>
-<p>16A/131/13, Chairman Nalla Muthupillai Street,<br>
-Madurai - 625001</p>
-</div>
+<p>16A/131/13, Chairman Nalla Muthupillai Street,<br>Madurai - 625001</p>
 </div>
 
+</div>
 </section>
 
 </body>
