@@ -9,12 +9,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
 body{
 background:#000;
 color:#eaeaea;
 font-family:'Poppins',sans-serif;
+line-height:1.6;
 }
 
 /* GOLD SHINE */
@@ -25,7 +31,9 @@ background-size:300% auto;
 -webkit-text-fill-color:transparent;
 animation:shine 5s linear infinite;
 }
-@keyframes shine{to{background-position:300% center;}}
+@keyframes shine{
+to{background-position:300% center;}
+}
 
 /* NAV */
 nav{
@@ -45,27 +53,33 @@ color:#c9a227;
 margin-left:20px;
 text-decoration:none;
 font-size:14px;
+transition:0.3s;
 }
 
-nav a:hover{color:#fff1b0}
+nav a:hover{
+color:#fff1b0;
+}
 
 /* HERO */
 .hero{
 text-align:center;
-padding:80px 10% 60px;
+padding:60px 10% 40px;
 }
 
 .hero h1{
-font-size:36px;
+font-size:38px;
 font-family:'Playfair Display',serif;
 margin-bottom:10px;
 }
 
-.hero p{color:#aaa;font-size:14px}
+.hero p{
+color:#aaa;
+font-size:14px;
+}
 
 /* SECTION */
 section{
-padding:70px 10%;
+padding:50px 10%;
 max-width:1100px;
 margin:auto;
 }
@@ -73,7 +87,7 @@ margin:auto;
 .section-title{
 font-family:'Playfair Display',serif;
 font-size:24px;
-margin-bottom:30px;
+margin-bottom:20px;
 display:flex;
 align-items:center;
 gap:10px;
@@ -85,7 +99,7 @@ background:#111;
 padding:25px;
 border-radius:12px;
 border:1px solid rgba(201,162,39,0.2);
-margin-bottom:25px;
+margin-bottom:20px;
 transition:0.4s;
 }
 
@@ -130,7 +144,7 @@ gap:25px;
 
 .contact-box{
 background:#111;
-padding:30px;
+padding:25px;
 text-align:center;
 border-radius:12px;
 border:1px solid rgba(201,162,39,0.2);
@@ -138,8 +152,8 @@ transition:0.4s;
 }
 
 .contact-box i{
-font-size:30px;
-margin-bottom:15px;
+font-size:28px;
+margin-bottom:12px;
 color:#f5d76e;
 }
 
@@ -148,8 +162,15 @@ transform:translateY(-8px);
 box-shadow:0 0 25px rgba(245,215,110,0.5);
 }
 
-ul{margin-left:20px;margin-top:10px;}
-li{margin-bottom:8px;color:#ccc}
+ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+li{
+margin-bottom:8px;
+color:#ccc;
+}
 
 /* Fade Animation */
 .fade{
@@ -157,8 +178,12 @@ opacity:0;
 transform:translateY(30px);
 animation:fadeIn 1s forwards;
 }
+
 @keyframes fadeIn{
-to{opacity:1;transform:translateY(0);}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -169,6 +194,7 @@ to{opacity:1;transform:translateY(0);}
 <nav>
 <div class="gold">Sowmiya</div>
 <div>
+<a href="#about">About</a>
 <a href="#education">Education</a>
 <a href="#experience">Experience</a>
 <a href="#skills">Skills</a>
@@ -178,14 +204,27 @@ to{opacity:1;transform:translateY(0);}
 
 <div class="hero fade">
 <h1 class="gold">Sowmiya Natarajan</h1>
-<p>
-Madurai, Tamil Nadu <br>
-9566475966 | sowmiya.natarajan08@gmail.com
-</p>
+<p>WordPress Web Designer</p>
 </div>
 
+<!-- ABOUT -->
+<section id="about" class="fade" >
+<h2 class="section-title gold">
+<i class="fa-solid fa-user"></i> About Me
+</h2>
+
+<div class="card">
+<p>
+Creative and detail-oriented WordPress Web Designer with experience in designing, developing and maintaining professional websites. Skilled in Elementor, Divi and WPBakery. Passionate about building responsive, user-friendly websites that enhance brand presence and business growth.
+</p>
+</div>
+</section>
+
+<!-- EDUCATION -->
 <section id="education" class="fade">
-<h2 class="section-title gold"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+<h2 class="section-title gold">
+<i class="fa-solid fa-graduation-cap"></i> Education
+</h2>
 
 <div class="card">
 <b>The American College</b> (2020 - 2023)<br>
@@ -194,19 +233,23 @@ B.Com (Information Technology) – 80.5%
 
 <div class="card">
 <b>Nirmala Girls Higher Secondary School</b><br>
-HSC – 73.5% (2019 - 2020)
+  <li>HSC – 73.5% (2019 - 2020)</li>
+<li>SSLC – 74.6% (2017 - 2018)
+</li>
+
+
 </div>
 
-<div class="card">
-SSLC – 74.6% (2017 - 2018)
-</div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience" class="fade">
-<h2 class="section-title gold"><i class="fa-solid fa-briefcase"></i> Experience</h2>
+<h2 class="section-title gold">
+<i class="fa-solid fa-briefcase"></i> Experience
+</h2>
 
 <div class="card">
-<b>ESSKAY ASSOCIATES</b> – Account Analyst (Oct'23 - Nov'24)
+<b>ESSKAY ASSOCIATES</b> – Account Analyst (Oct 2023 - Nov 2024)
 <ul>
 <li>Handled GST filings (GSTR-1, GSTR-3B)</li>
 <li>Managed purchase & sales entries</li>
@@ -215,7 +258,7 @@ SSLC – 74.6% (2017 - 2018)
 </div>
 
 <div class="card">
-<b>CBRA</b> – Web Designer & Developer (Dec'24 - Present)
+<b>CBRA</b> – Web Designer & Developer (Dec 2024 - Present)
 <ul>
 <li>WordPress (Divi, Elementor, WPBakery)</li>
 <li>Hosting: WP Engine, Hostinger, Cloudways</li>
@@ -225,8 +268,11 @@ SSLC – 74.6% (2017 - 2018)
 </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="fade">
-<h2 class="section-title gold"><i class="fa-solid fa-code"></i> Skills</h2>
+<h2 class="section-title gold">
+<i class="fa-solid fa-code"></i> Skills
+</h2>
 
 <div class="skills-grid">
 
@@ -263,8 +309,11 @@ SSLC – 74.6% (2017 - 2018)
 </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="fade">
-<h2 class="section-title gold"><i class="fa-solid fa-envelope"></i> Contact</h2>
+<h2 class="section-title gold">
+<i class="fa-solid fa-envelope"></i> Contact
+</h2>
 
 <div class="contact-container">
 
