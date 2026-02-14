@@ -296,7 +296,7 @@ background:#0a0a0a;   /* 👈 lighter than section */
 padding:30px;
 border-radius:12px;
 border:1px solid rgba(201,162,39,0.4);
-transition:0.3s ease;
+	transition:0.3s ease;
 }
 /* ABOUT SECTION */
 .about-container{
@@ -305,46 +305,27 @@ align-items:center;
 gap:60px;
 }
 
-/* MOBILE FIX */
 @media (max-width:768px){
 
 .about-container{
-flex-direction:column;
-gap:30px;
-padding:0 20px;
-}
-
-@media (max-width:768px){
-
-.about-container{
-display:flex;
-flex-direction:column;   /* 👈 stack vertically */
-padding:0 20px;
-gap:25px;
+display:block;
 }
 
 .about-text{
-order:1;   /* 👈 content first */
 width:100%;
-text-align:left;
+margin-bottom:20px;
 }
 
 .about-image{
-order:2;   /* 👈 image below */
 width:100%;
 text-align:center;
 }
 
 .about-image img{
 width:100%;
-max-width:90%;
 height:auto;
 }
 
-}
-
-.about-text{
-max-width:100%;
 }
 
 
@@ -369,6 +350,21 @@ max-width:100%;
 <p></p>
 </div>
 
+<div class="about-container">
+
+  <div class="about-text">
+    <!-- content here -->
+  </div>
+
+  <div class="about-image">
+    <img src="your-image.jpg" alt="About Image">
+  </div>
+
+</div>
+  
+  
+ 
+  
 <!-- ABOUT -->
 <section id="about">
 <h2 class="section-title gold">
