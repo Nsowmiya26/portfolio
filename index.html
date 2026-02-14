@@ -9,185 +9,78 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+body{background:#000;color:#ddd;font-family:'Poppins',sans-serif;}
 
-body{
-background:#000;
-color:#ddd;
-font-family:'Poppins',sans-serif;
-}
-
-/* GOLD SHINE */
 .gold{
-background: linear-gradient(
-90deg,
-#b68b2c,
-#f5d76e,
-#c9a227,
-#fff1b0,
-#b68b2c
-);
+background: linear-gradient(90deg,#b68b2c,#f5d76e,#c9a227,#fff1b0,#b68b2c);
 background-size:300% auto;
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 animation:shine 5s linear infinite;
 }
+@keyframes shine{to{background-position:300% center;}}
 
-@keyframes shine{
-to{background-position:300% center;}
-}
-
-/* NAV */
 nav{
-display:flex;
-justify-content:space-between;
-padding:15px 10%;
-border-bottom:1px solid rgba(201,162,39,0.3);
-position:sticky;
-top:0;
-background:#000;
+display:flex;justify-content:space-between;
+padding:15px 10%;border-bottom:1px solid rgba(201,162,39,0.3);
+background:#000;position:sticky;top:0;
 }
+nav a{color:#c9a227;margin-left:18px;text-decoration:none;font-size:14px;}
+nav a:hover{color:#fff1b0;}
 
-nav a{
-text-decoration:none;
-margin-left:18px;
-color:#c9a227;
-font-size:14px;
-}
-
-nav a:hover{
-color:#fff1b0;
-}
-
-/* HERO */
 .hero{
-height:80vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
+height:80vh;display:flex;flex-direction:column;
+align-items:center;justify-content:center;text-align:center;
 }
+.hero h1{font-family:'Playfair Display',serif;font-size:36px;}
+.hero p{margin-top:10px;color:#ccc;}
 
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:36px;
-}
-
-.hero p{
-margin-top:10px;
-font-size:16px;
-color:#ccc;
-}
-
-/* BUTTON */
-.btn{
-margin-top:20px;
-padding:10px 30px;
-border-radius:30px;
-background: linear-gradient(90deg,#b68b2c,#f5d76e,#c9a227);
-color:#000;
-text-decoration:none;
-font-size:14px;
-font-weight:500;
-}
-
-/* SECTION */
-section{
-padding:70px 10%;
-}
-
+section{padding:70px 10%;}
 .section-title{
 font-family:'Playfair Display',serif;
-font-size:22px;
-margin-bottom:30px;
-border-left:2px solid #c9a227;
-padding-left:10px;
+font-size:22px;margin-bottom:25px;
+border-left:2px solid #c9a227;padding-left:10px;
 }
 
-/* CARD */
 .card{
-background:#111;
-padding:20px;
-border-radius:8px;
+background:#111;padding:20px;border-radius:10px;
 border:1px solid rgba(201,162,39,0.2);
-margin-bottom:20px;
+margin-bottom:20px;transition:0.3s;
+}
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(245,215,110,0.4);
 }
 
-/* SKILLS */
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
+ul{padding-left:20px;margin-top:10px;}
+li{margin-bottom:8px;}
+
+.skills-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:10px;
 }
 
-.skill-card{
-width:140px;
-height:140px;
-background:#111;
-border-radius:15px;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-border:1px solid rgba(201,162,39,0.2);
-color:#fff;
-transition:0.3s;
-}
-
-.skill-card i{
-font-size:26px;
-color:#f5d76e;
-margin-bottom:8px;
-}
-
-.skill-card:hover{
-transform:scale(1.08);
-box-shadow:0 0 20px rgba(245,215,110,0.6);
-}
-
-/* ===== CONTACT HORIZONTAL ===== */
 .contact-container{
-display:flex;
-gap:30px;
-justify-content:center;
+display:flex;gap:25px;justify-content:center;
 }
-
 .contact-box{
-flex:1;
-background:#111;
-padding:35px 20px;
-text-align:center;
-border-radius:12px;
+flex:1;background:#111;padding:30px;
+text-align:center;border-radius:10px;
 border:1px solid rgba(201,162,39,0.3);
 transition:0.3s;
 }
-
-.contact-box i{
-font-size:30px;
-color:#f5d76e;
-margin-bottom:15px;
-}
-
-.contact-box h3{
-margin-bottom:10px;
-}
-
 .contact-box:hover{
 transform:translateY(-8px);
 box-shadow:0 0 25px rgba(245,215,110,0.5);
 }
-
-/* RESPONSIVE */
-@media(max-width:900px){
-.contact-container{
-flex-direction:column;
+.contact-box i{
+font-size:28px;margin-bottom:15px;color:#f5d76e;
 }
+
+@media(max-width:900px){
+.contact-container{flex-direction:column;}
 }
 </style>
 </head>
@@ -198,8 +91,10 @@ flex-direction:column;
 <div class="gold">Sowmiya</div>
 <div>
 <a href="#about">About</a>
+<a href="#education">Education</a>
 <a href="#experience">Experience</a>
 <a href="#skills">Skills</a>
+<a href="#achievements">Achievements</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
@@ -207,14 +102,31 @@ flex-direction:column;
 <section class="hero">
 <h1 class="gold">Sowmiya Natarajan</h1>
 <p>WordPress Web Designer | 1.3 Years Experience</p>
-<a href="#contact" class="btn">Hire Me</a>
 </section>
 
 <section id="about">
-<h2 class="section-title gold">About Me</h2>
+<h2 class="section-title gold">Objective</h2>
 <div class="card">
-Passionate WordPress Web Designer with expertise in Elementor, Divi & WPBakery.
-Experienced in website customization, hosting management and migrations.
+To utilize my technical skills and provide a professional service to customers by applying and honing my knowledge and working in a challenging and motivating working environment.
+</div>
+</section>
+
+<section id="education">
+<h2 class="section-title gold">Education</h2>
+
+<div class="card">
+<b>The American College</b><br>
+B.Com (Information Technology) – 80.5%
+</div>
+
+<div class="card">
+<b>Nirmala Girls Higher Secondary School</b><br>
+HSC – 73.5%
+</div>
+
+<div class="card">
+<b>Nirmala Girls Higher Secondary School</b><br>
+SSLC – 74.6%
 </div>
 </section>
 
@@ -222,23 +134,60 @@ Experienced in website customization, hosting management and migrations.
 <h2 class="section-title gold">Experience</h2>
 
 <div class="card">
-<h3>CBRA – Web Design & Development</h3>
-<p>Dec 2024 - Present</p>
+<b>CBRA – Web Design & Web Development (Dec 2024 – Present)</b>
+<ul>
+<li>Designed and developed websites using WordPress (Divi, Elementor, WPBakery).</li>
+<li>Updated PHP & cPanel managed websites.</li>
+<li>Worked on WP Engine, Hostinger & Cloudways hosting platforms.</li>
+<li>Handled site migrations, backups & renewal follow-ups.</li>
+<li>Configured and managed business email accounts.</li>
+</ul>
 </div>
 
 <div class="card">
-<h3>ESSKAY ASSOCIATES – Account Analyst</h3>
-<p>Oct 2023 - Nov 2024</p>
+<b>ESSKAY ASSOCIATES – Account Analyst (Oct 2023 – Nov 2024)</b>
+<ul>
+<li>Managed GST filing (GSTR-1, GSTR-3B) for 40+ clients.</li>
+<li>Handled purchase & sales entries with accurate tax calculations.</li>
+<li>Maintained Financial Management Excel sheets monthly.</li>
+</ul>
 </div>
 </section>
 
 <section id="skills">
 <h2 class="section-title gold">Skills</h2>
-<div class="skills">
-<div class="skill-card"><i class="fa-brands fa-wordpress"></i>WordPress</div>
-<div class="skill-card"><i class="fa-solid fa-code"></i>HTML & CSS</div>
-<div class="skill-card"><i class="fa-solid fa-server"></i>Hosting</div>
-<div class="skill-card"><i class="fa-solid fa-envelope"></i>Email Setup</div>
+<div class="card skills-list">
+<div>MS Office (Excel, Word, PPT, PDF)</div>
+<div>WordPress</div>
+<div>Photoshop & Canva</div>
+<div>HTML & CSS</div>
+<div>Basic Programming (C, C++, Java)</div>
+<div>Tally ERP 9</div>
+<div>Typewriting – English & Tamil</div>
+</div>
+</section>
+
+<section id="achievements">
+<h2 class="section-title gold">Achievements & Certifications</h2>
+<div class="card">
+<ul>
+<li>Participated in Pencil Drawing Competition – FEM FIESTA 2022.</li>
+<li>Completed Creative Advertising Course (Jan 2021 – Apr 2021).</li>
+<li>Completed Digital Marketing Course (Aug 2020 – Dec 2020).</li>
+</ul>
+</div>
+
+<h2 class="section-title gold">Languages</h2>
+<div class="card">
+English – Read & Write<br>
+Tamil – Read & Write
+</div>
+
+<h2 class="section-title gold">Personal Details</h2>
+<div class="card">
+Date of Birth: 26/08/2002<br>
+Nationality: Indian<br>
+Gender: Female
 </div>
 </section>
 
@@ -246,7 +195,6 @@ Experienced in website customization, hosting management and migrations.
 <h2 class="section-title gold">Contact</h2>
 
 <div class="contact-container">
-
 <div class="contact-box">
 <i class="fa-solid fa-phone"></i>
 <h3 class="gold">Phone</h3>
@@ -261,11 +209,12 @@ Experienced in website customization, hosting management and migrations.
 
 <div class="contact-box">
 <i class="fa-solid fa-location-dot"></i>
-<h3 class="gold">Location</h3>
-<p>Madurai, Tamil Nadu</p>
+<h3 class="gold">Address</h3>
+<p>16A/131/13, Chairman Nalla Muthupillai Street,<br>
+Madurai - 625001</p>
+</div>
 </div>
 
-</div>
 </section>
 
 </body>
