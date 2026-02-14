@@ -298,16 +298,51 @@ border-radius:12px;
 border:1px solid rgba(201,162,39,0.4);
 transition:0.3s ease;
 }
-.about-text{
-text-align: justify;
-  max-width:600px;   /* increase if needed */
-
-line-height: 1.8;
+/* ABOUT SECTION */
+.about-container{
+display:flex;
+align-items:center;
+gap:60px;
 }
+
+/* MOBILE FIX */
+@media (max-width:768px){
+
+.about-container{
+flex-direction:column;
+gap:30px;
+padding:0 20px;
+}
+
+.about-text{
+width:100%;
+text-align:left;
+font-size:16px;
+line-height:1.8;
+}
+
+.about-image{
+width:100%;
+text-align:center;
+}
+
 .about-image img{
 width:100%;
-max-width:500px;
+max-width:100%;
+height:auto;
 }
+
+}
+#about{
+padding:60px 0;
+}
+
+.about-text{
+max-width:100%;
+}
+
+
+
 
 </style>
 </head>
@@ -342,6 +377,7 @@ max-width:500px;
 <div >
 
 Creative and detail-oriented WordPress Web Designer with experience in designing, developing, and maintaining professional websites. Passionate about building responsive and business-focused digital solutions.
+ 
 I focus on creating clean, modern, and user-friendly website designs that enhance brand identity and improve user engagement. With a strong understanding of website performance, hosting management, and content structuring, I ensure that every website I develop is optimized for speed, security, and seamless user experience. I am always eager to learn new technologies and continuously improve my skills to deliver high-quality and impactful web solutions.
 
 </div>
@@ -448,5 +484,3 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 
 </body>
 </html>
-
-
