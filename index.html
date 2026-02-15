@@ -306,18 +306,15 @@ background:#1a1a1a;
 padding:80px 20px;
 }
 
-.skill-box{
-background:#0a0a0a;   /* 👈 lighter than section */
-padding:30px;
-border-radius:12px;
-border:1px solid rgba(201,162,39,0.4);
-	transition:0.3s ease;
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 25px;
 }
-@media (max-width: 768px) {
-    .skills-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+#skills{
+    padding: 80px 10%;
 }
+
 	
  #contact{
 background:#1a1a1a;
@@ -566,6 +563,7 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 
 </body>
 </html>
+
 
 
 
