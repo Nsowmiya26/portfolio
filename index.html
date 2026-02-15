@@ -324,10 +324,16 @@ background:#1a1a1a;
 padding:80px 20px;
 }
 
-.skills-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 2 columns */
-    gap: 25px;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.skill-box {
+  width: 100%;
+}
+
 }
 #skills{
     padding: 80px 10%;
