@@ -67,6 +67,50 @@ nav a:hover{
 color:#fff1b0;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: black;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+  
+  
+  
 /* HERO BANNER */
 .hero{
 height:50vh;
@@ -413,18 +457,26 @@ transform:scale(1.05);
 
 <body>
 
-<nav>
+  <nav class="navbar">
 <div class="logo gold">Sowmiya Natarajan</div>
-<div>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#experience">Experience</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Project</a>
-<a href="#contact">Contact</a>
-</div>
+
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#project">Project</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
+  
+  
+  
 <div class="hero">
 <h1 class="gold">Professional WordPress Web Designer</h1>
 <p></p>
@@ -583,6 +635,16 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 © 2026 <span>Sowmiya Natarajan</span> | All Rights Reserved
 </footer>
 
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+  
+  
 </body>
 </html>
 
