@@ -153,6 +153,21 @@ transform:scale(1.05);
 box-shadow:0 0 20px rgba(245,215,110,0.4);
 }
 
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: #000;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+	
+
 /* CONTACT */
 .contact-container{
 display:grid;
@@ -298,7 +313,12 @@ border-radius:12px;
 border:1px solid rgba(201,162,39,0.4);
 	transition:0.3s ease;
 }
-
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+	
  #contact{
 background:#1a1a1a;
 padding:80px 20px;
@@ -463,15 +483,16 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 <h2 class="section-title gold">
 <i class="fa-solid fa-code"></i> Skills
 </h2>
-<div class="skills-grid">
-<div class="skill-box"><i class="fa-brands fa-wordpress"></i><p>WordPress</p></div>
-<div class="skill-box"><i class="fa-brands fa-html5"></i><p>HTML</p></div>
-<div class="skill-box"><i class="fa-brands fa-css3-alt"></i><p>CSS</p></div>
-<div class="skill-box"><i class="fa-solid fa-file-excel"></i><p>MS Office</p></div>
-<div class="skill-box"><i class="fa-solid fa-pen-ruler"></i><p>Photoshop & Canva</p></div>
-<div class="skill-box"><i class="fa-solid fa-pen-ruler"></i><p>Type Writting (English & Tamil)</p></div>
-<div class="skill-box"><i class="fa-solid fa-database"></i><p>Tally ERP 9</p></div>
-<div class="skill-box"><i class="fa-solid fa-database"></i><p>Basic Programming C,C++</p></div>
+<div class="skills-container">
+    <div class="skill-card">WordPress</div>
+    <div class="skill-card">HTML</div>
+    <div class="skill-card">CSS</div>
+    <div class="skill-card">MS Office</div>
+
+    <div class="skill-card">Photoshop & Canva</div>
+    <div class="skill-card">Type Writing</div>
+    <div class="skill-card">Tally ERP 9</div>
+    <div class="skill-card">C, C++</div>
 </div>
 </section>
  
@@ -545,6 +566,7 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 
 </body>
 </html>
+
 
 
 
