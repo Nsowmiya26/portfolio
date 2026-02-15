@@ -307,7 +307,48 @@ gap:60px;
 
 
 }
+/* PROJECTS */
+#projects{
+background:#000;
+}
 
+.projects-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.project-card{
+background:#111;
+border-radius:12px;
+overflow:hidden;
+border:1px solid rgba(201,162,39,0.3);
+transition:0.3s;
+}
+
+.project-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.project-card h3{
+padding:15px;
+color:#f5d76e;
+text-align:center;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(245,215,110,0.3);
+}
+
+.project-card:hover img{
+transform:scale(1.05);
+}
 
 </style>
 </head>
@@ -417,7 +458,46 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 <div class="skill-box"><i class="fa-solid fa-database"></i><p>Basic Programming C,C++</p></div>
 </div>
 </section>
+ 
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title gold"><i class="fa-solid fa-laptop-code"></i> Projects</h2>
+<div class="projects-container">
 
+<div class="project-card">
+<img src="project_campaignsoundsgood.jpg">
+<h3>Project 1</h3>
+</div>
+
+<div class="project-card">
+<img src="images/project2.png">
+<h3>Project 2</h3>
+</div>
+
+<div class="project-card">
+<img src="images/project3.png">
+<h3>Project 3</h3>
+</div>
+
+<div class="project-card">
+<img src="images/project4.png">
+<h3>Project 4</h3>
+</div>
+
+<div class="project-card">
+<img src="images/project5.png">
+<h3>Project 5</h3>
+</div>
+
+<div class="project-card">
+<img src="images/project6.png">
+<h3>Project 6</h3>
+</div>
+
+</div>
+</section> 
+ 
+ 
 <section id="contact">
 <h2 class="section-title gold">
 <i class="fa-solid fa-envelope"></i> Contact
@@ -450,4 +530,5 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 
 </body>
 </html>
+
 
