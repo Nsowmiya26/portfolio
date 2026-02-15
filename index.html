@@ -178,6 +178,17 @@ box-shadow:0 0 20px rgba(245,215,110,0.4);
         padding: 40px 6%;
     }
 }
+<style>
+.desktop-only {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
+</style>
 
 
 /* CONTACT */
@@ -435,7 +446,7 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 </div>
 </div>
 
-<div class="split-image">
+<div class="desktop-only">
 <img src="https://www.effectivewebsolutions.biz/wp-content/uploads/2023/10/Web-Design-Ridgefield.jpg.webp" alt="About Image">
 </div>
 
@@ -575,6 +586,7 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 
 </body>
 </html>
+
 
 
 
