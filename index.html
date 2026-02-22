@@ -67,50 +67,6 @@ nav a:hover{
 color:#fff1b0;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: black;
-    width: 200px;
-    padding: 20px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-  
-  
-  
 /* HERO BANNER */
 .hero{
 height:50vh;
@@ -451,29 +407,84 @@ box-shadow:0 0 25px rgba(245,215,110,0.3);
 transform:scale(1.05);
 }
 
+.projects-container{
+display:flex;
+gap:25px;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+padding-bottom:20px;
+}
 
+.projects-container::-webkit-scrollbar{
+height:8px;
+}
+
+.projects-container::-webkit-scrollbar-thumb{
+background:#c9a227;
+border-radius:10px;
+}
+
+/* Project Card */
+.project-card{
+flex:0 0 33.33%;
+background:#111;
+border-radius:12px;
+overflow:hidden;
+border:1px solid rgba(201,162,39,0.3);
+scroll-snap-align:start;
+text-decoration:none;
+color:inherit;
+transition:0.3s;
+}
+
+.project-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.project-card h3{
+padding:15px;
+color:#f5d76e;
+text-align:center;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(245,215,110,0.3);
+}
+
+.project-card:hover img{
+transform:scale(1.05);
+}
+
+/* 📱 Mobile View */
+@media(max-width:768px){
+.project-card{
+flex:0 0 100%;
+}
+}
+  
+  
 </style>
 </head>
 
 <body>
 
-  <nav class="navbar">
+<nav>
 <div class="logo gold">Sowmiya Natarajan</div>
-
-  <div class="menu-toggle" id="menu-toggle">
-    ☰
-  </div>
-
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<div>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Project</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
+  
   
   
   
@@ -572,36 +583,37 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 <h2 class="section-title gold"><i class="fa-solid fa-laptop-code"></i> Projects</h2>
 <div class="projects-container">
 
-<div class="project-card">
+<a href="https://campaign-soundsgood.in" target="_blank" class="project-card">
 <img src="images/screencapture-campaign-soundsgood-in-2026-02-15-00_48_30.png">
 <h3>Project 1</h3>
-</div>
+</a>
 
-<div class="project-card">
+<a href="https://thavikahotelsandresorts.com" target="_blank" class="project-card">
 <img src="images/screencapture-thavikahotelsandresorts-thavika-hotel-yathin-mysore-2026-02-15-00_28_46.png">
 <h3>Project 2</h3>
-</div>
+</a>
 
-<div class="project-card">
+<a href="https://amce.co.in/event-gallery" target="_blank" class="project-card">
 <img src="images/screencapture-amce-co-in-event-gallery-2026-02-15-00_39_56.png">
 <h3>Project 3</h3>
-</div>
+</a>
 
-<div class="project-card">
+<a href="https://vkeyhometuitionservices.in" target="_blank" class="project-card">
 <img src="images/screencapture-vkeyhometuitionservices-in-2026-02-15-00_40_53.png">
 <h3>Project 4</h3>
-</div>
+</a>
 
-<div class="project-card">
+<a href="https://tonyanmak.com" target="_blank" class="project-card">
 <img src="images/screencapture-tonyanmak-2026-02-15-02_37_25.png">
 <h3>Project 5</h3>
-</div>
+</a>
 
-<div class="project-card">
+<a href="https://msnpioneermeenakshicollege.org" target="_blank" class="project-card">
 <img src="images/screencapture-msnpioneermeenakshicollege-org-2026-02-15-03_00_32.png">
 <h3>Project 6</h3>
-</div>
+</a>
 
+</div>
 </div>
 </section>
 
@@ -635,39 +647,5 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 © 2026 <span>Sowmiya Natarajan</span> | All Rights Reserved
 </footer>
 
-<script>
-  const toggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
-
-  toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-</script>
-  
-  
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
