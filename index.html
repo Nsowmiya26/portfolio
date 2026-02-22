@@ -708,8 +708,23 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 © 2026 <span>Sowmiya Natarajan</span> | All Rights Reserved
 </footer>
 
+<script>
+function scrollProjects(direction){
+const container = document.getElementById('projectScroll');
+const scrollAmount = container.clientWidth / 1.2;
+container.scrollBy({
+left: direction * scrollAmount,
+behavior: 'smooth'
+});
+}
+</script>
+
 </body>
 </html>
+	
+</body>
+</html>
+
 
 
 
