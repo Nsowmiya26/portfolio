@@ -424,14 +424,31 @@ background:#c9a227;
 border-radius:10px;
 }
 
-/* Project Card */
+/* PROJECT SLIDER */
+.projects-wrapper{
+position:relative;
+max-width:1200px;
+margin:auto;
+}
+
+.projects-container{
+display:flex;
+gap:25px;
+overflow-x:auto;
+scroll-behavior:smooth;
+scrollbar-width:none;
+}
+
+.projects-container::-webkit-scrollbar{
+display:none;
+}
+
 .project-card{
 flex:0 0 33.33%;
 background:#111;
 border-radius:12px;
 overflow:hidden;
 border:1px solid rgba(201,162,39,0.3);
-scroll-snap-align:start;
 text-decoration:none;
 color:inherit;
 transition:0.3s;
@@ -459,13 +476,43 @@ box-shadow:0 0 25px rgba(245,215,110,0.3);
 transform:scale(1.05);
 }
 
-/* 📱 Mobile View */
+/* ARROWS */
+.scroll-btn{
+position:absolute;
+top:45%;
+transform:translateY(-50%);
+background:#c9a227;
+border:none;
+color:#000;
+font-size:28px;
+padding:10px 15px;
+cursor:pointer;
+border-radius:50%;
+z-index:10;
+transition:0.3s;
+}
+
+.scroll-btn:hover{
+background:#f5d76e;
+}
+
+.scroll-btn.left{
+left:-20px;
+}
+
+.scroll-btn.right{
+right:-20px;
+}
+
+/* MOBILE VIEW */
 @media(max-width:768px){
 .project-card{
 flex:0 0 100%;
 }
+.scroll-btn{
+display:none;
 }
-  
+}  
   
 </style>
 </head>
@@ -581,8 +628,17 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
  
 <!-- PROJECTS -->
 <section id="projects">
-<h2 class="section-title gold"><i class="fa-solid fa-laptop-code"></i> Projects</h2>
-<div class="projects-container">
+<h2 class="section-title gold">
+<i class="fa-solid fa-laptop-code"></i> Projects
+</h2>
+
+<div class="projects-wrapper">
+
+<button class="scroll-btn left" onclick="scrollProjects(-1)">
+&#10094;
+</button>
+
+<div class="projects-container" id="projectScroll">
 
 <a href="https://campaign-soundsgood.in" target="_blank" class="project-card">
 <img src="images/screencapture-campaign-soundsgood-in-2026-02-15-00_48_30.png">
@@ -601,7 +657,7 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 
 <a href="https://vkeyhometuitionservices.in" target="_blank" class="project-card">
 <img src="images/screencapture-vkeyhometuitionservices-in-2026-02-15-00_40_53.png">
-<h3>Educational Institution</h3>
+<h3>Education Service</h3>
 </a>
 
 <a href="https://tonyanmak.com" target="_blank" class="project-card">
@@ -611,13 +667,17 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 
 <a href="https://msnpioneermeenakshicollege.org" target="_blank" class="project-card">
 <img src="images/screencapture-msnpioneermeenakshicollege-org-2026-02-15-03_00_32.png">
-<h3>College Information</h3>
+<h3>College Website</h3>
 </a>
 
 </div>
+
+<button class="scroll-btn right" onclick="scrollProjects(1)">
+&#10095;
+</button>
+
 </div>
 </section>
-
 <section id="contact">
 <h2 class="section-title gold">
 <i class="fa-solid fa-envelope"></i> Contact
@@ -650,5 +710,6 @@ I focus on creating clean, modern, and user-friendly website designs that enhanc
 
 </body>
 </html>
+
 
 
