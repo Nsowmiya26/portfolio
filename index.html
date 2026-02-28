@@ -353,6 +353,46 @@ border:1px solid rgba(201,162,39,0.4);
 	transition:0.3s ease;
 }
 	
+ /* Hide hamburger in desktop */
+.menu-toggle{
+display:none;
+font-size:26px;
+color:#c9a227;
+cursor:pointer;
+}
+
+/* Mobile View */
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+right:5%;
+background:#000;
+width:200px;
+padding:20px;
+border:1px solid rgba(201,162,39,0.3);
+}
+
+.nav-links a{
+display:block;
+margin:15px 0;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links.active{
+display:flex;
+}
+} 
+  
+  
+  
+  
 /* ABOUT SECTION */
 .about-container{
 display:flex;
@@ -520,15 +560,22 @@ display:none;
 <body>
 
 <nav>
-<div class="logo gold">Sowmiya Natarajan</div>
-<div>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#experience">Experience</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Project</a>
-<a href="#contact">Contact</a>
-</div>
+  <div class="logo gold">Sowmiya Natarajan</div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- Menu Links -->
+  <div class="nav-links" id="nav-links">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Project</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
   
@@ -719,12 +766,17 @@ behavior: 'smooth'
 }
 </script>
 
+  <script>
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", function(){
+navLinks.classList.toggle("active");
+});
+</script>
+  
 </body>
 </html>
 	
 </body>
 </html>
-
-
-
-
